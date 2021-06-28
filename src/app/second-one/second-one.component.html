@@ -1,0 +1,18 @@
+<button class="clickMeButton" (click)="onClick()">Click Me</button>
+<div *ngIf="is_show" class="pageSecond">
+    <h2>About Me</h2>
+    <div class="container">
+        <div class="header">
+            <div class="col">Last Name</div>
+            <div class="col">First Name</div>
+            <div class="col">Age</div>
+            <div class="col">Phone</div>
+        </div>
+        <div>
+            <div class="col">{{last_name}}</div>
+            <div class="col">{{first_name}}</div>
+            <div class="col">{{age}}</div>
+            <div class="col">{{phone}}</div>
+        </div>
+    </div>
+</div>

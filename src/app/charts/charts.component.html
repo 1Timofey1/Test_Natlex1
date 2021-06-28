@@ -1,0 +1,51 @@
+<h3>Charts</h3>
+<div class="container">
+    <b>From</b> <input id="dateFrom" type="text" class="dateInput" value="2002" maxlength="4" placeholder="Min: 2002" (keyup)="onFiltering($event)" />
+    <b>To</b> <input id="dateTo" type="text" class="dateInput" value="2021" maxlength="4" placeholder="Max: 2021" min="2021" (keyup)="onFiltering($event)" />
+    <div class="chartsBlock">
+        <div class="charts" [hidden]="!chart_one">
+            <canvas id="chart1" height="100">{{chart_one}}</canvas>
+            <label class="radioLabel">Line
+                <input type="radio" id="line" name="chart1_type" checked (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioLabel">Bar
+                <input type="radio" id="bar" name="chart1_type" (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="charts" [hidden]="!chart_two">
+            <canvas id="chart2" height="100">{{chart_two}}</canvas>
+            <label class="radioLabel">Line
+                <input type="radio" id="line" name="chart2_type" checked (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioLabel">Bar
+                <input type="radio" id="bar" name="chart2_type" (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="charts" [hidden]="!chart_three">
+            <canvas id="chart3" height="100">{{chart_three}}</canvas>
+            <label class="radioLabel">Line
+                <input type="radio" id="line" name="chart3_type" checked (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioLabel">Bar
+                <input type="radio" id="bar" name="chart3_type" (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="charts" [hidden]="!chart_four">
+            <canvas id="chart4" height="100">{{chart_four}}</canvas>
+            <label class="radioLabel">Line
+                <input type="radio" id="line" name="chart4_type" checked (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+            <label class="radioLabel">Bar
+                <input type="radio" id="bar" name="chart4_type" (change)="handleChange($event)" />
+                <span class="checkmark"></span>
+            </label>
+        </div>
+    </div>
+</div>
